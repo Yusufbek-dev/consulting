@@ -1,0 +1,22 @@
+@use "../globals/colors" as *;
+@use "../globals/mixin" as *;
+
+footer {
+  padding: 50px 0;
+  background-color: #333333;
+  &>div {
+    text-align: center;
+    display: flex;
+    row-gap: 50px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      color: #fff;
+      a {
+        color: #97bbd9;
+        text-decoration: underline;
+      }
+    }
+  }
+}

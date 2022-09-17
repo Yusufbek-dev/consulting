@@ -1,0 +1,47 @@
+@use "../globals/colors" as *;
+
+@mixin adjust {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+@mixin center {
+  margin-left:50%;
+  transform: translateX(-50%);
+}
+
+@mixin btn {
+      margin-top: 35px;
+      padding: 18px 52px;
+      border-radius: 40px;
+      border: 2px solid #000;
+      color: #fff;
+      font-weight: 700;
+      transition: .3s;
+      background-color: #000;
+      &:hover {
+        border: 2px solid $primary-color;
+        background-color:$primary-color;
+        color:#000;
+      }
+}
+
+// breakpoints
+
+@mixin tablet {
+  @media (max-width:1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width:500px) {
+    @content;
+  }
+}
+@mixin min-mobile {
+  @media (max-width:400px) {
+    @content;
+  }
+}
+

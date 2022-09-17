@@ -1,0 +1,81 @@
+@use "../globals/colors" as *;
+@use "../globals/mixin" as *;
+.bg-close {
+  position:absolute;
+  z-index: 98;
+  background-color: rgba(#000, .6);
+  width:100%;
+  left: 0;
+  right: 0;
+  height:100%;
+  transform: translateX(-100%);
+}
+.bg-close.active{
+  transform: translateX(0%);
+}
+header {
+  background-color: #fff;
+}
+nav {
+  padding: 0 30px;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content:space-between;
+  .list {
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 99;
+    top: 0px;
+    left: 0;
+    width: 30%;
+    background-color:#000;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height:100vh;
+    @include tablet {
+      width: 45%;
+    }
+    a {
+      color: #fff;
+      transition: .3s;
+      &:hover,
+      &:active {
+        color: $primary-color;
+      }
+    }
+  } 
+  .list.active {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    .bar {
+      transition: .3s;
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+  }
+  .hamburger.active {
+    .bar {
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
