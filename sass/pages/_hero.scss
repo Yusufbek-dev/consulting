@@ -854,7 +854,7 @@
       flex-direction: column;
       row-gap: 15px;
       width: 100%;
-      input:not(input[type="checkbox"], input[type="suvmit"]){
+      input:not(input[type="checkbox"], input[type="submit"]){
         border: none;
         border-bottom: 2px solid $primary-color;
         padding: 7px 10px;
@@ -882,15 +882,15 @@
       }
       input[type="submit"] {
         padding: 15px 10px;
-        height: 40px;
         border-radius: 40px;
         color: #fff;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
         background-color: $primary-color;
-
         transition: .3s;
         &:hover {
           background-color: #000;
-          text-transform: uppercase;
         }
       }
       

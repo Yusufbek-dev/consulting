@@ -394,8 +394,7 @@ footer > div p a {
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   padding: 25px 25px 40px;
   background-color: #fff;
   box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.101);
@@ -448,8 +447,7 @@ footer > div p a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
 }
 .work__item h2 {
   color: #fff;
@@ -497,8 +495,7 @@ footer > div p a {
   padding: 10px;
   border-radius: 50%;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 .work__item:nth-child(2) .work__item-img {
@@ -552,8 +549,7 @@ footer > div p a {
 
 .innovating {
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 .innovating__right {
   width: 45%;
@@ -929,8 +925,7 @@ footer > div p a {
 .value {
   margin-top: 60px;
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   justify-content: space-between;
 }
 .value__left {
@@ -1211,18 +1206,12 @@ footer > div p a {
   row-gap: 15px;
   width: 100%;
 }
-.contact__right form input:not(input[type=checkbox], input[type=suvmit]) {
+.contact__right form input:not(input[type=checkbox], input[type=submit]) {
   border: none;
   border-bottom: 2px solid #ea651c;
   padding: 7px 10px;
 }
-.contact__right form input:not(input[type=checkbox], input[type=suvmit])::-moz-placeholder {
-  color: #555555;
-}
-.contact__right form input:not(input[type=checkbox], input[type=suvmit]):-ms-input-placeholder {
-  color: #555555;
-}
-.contact__right form input:not(input[type=checkbox], input[type=suvmit])::placeholder {
+.contact__right form input:not(input[type=checkbox], input[type=submit])::placeholder {
   color: #555555;
 }
 .contact__right form textarea {
@@ -1241,15 +1230,16 @@ footer > div p a {
 }
 .contact__right form input[type=submit] {
   padding: 15px 10px;
-  height: 40px;
   border-radius: 40px;
   color: #fff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
   background-color: #ea651c;
   transition: 0.3s;
 }
 .contact__right form input[type=submit]:hover {
   background-color: #000;
-  text-transform: uppercase;
 }
 @media (max-width: 700px) {
   .contact {
@@ -1273,4 +1263,6 @@ footer > div p a {
   .contact__right {
     width: 100%;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
